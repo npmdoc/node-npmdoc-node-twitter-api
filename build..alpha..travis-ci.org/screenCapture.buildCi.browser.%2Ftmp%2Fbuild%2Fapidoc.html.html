@@ -1,0 +1,1984 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/reneraab/node-twitter-api">node-twitter-api (v1.8.0)</a>
+</h1>
+<h4>Simple module for using Twitter's API in node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-twitter-api">module node-twitter-api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.node-twitter-api">
+            function <span class="apidocSignatureSpan"></span>node-twitter-api
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index">
+            function <span class="apidocSignatureSpan">node-twitter-api.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-twitter-api.</span>index.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-twitter-api.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-twitter-api.index">module node-twitter-api.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.index">
+            function <span class="apidocSignatureSpan">node-twitter-api.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-twitter-api.index.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-twitter-api.index.prototype">module node-twitter-api.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.account">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>account
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.blocks">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>blocks
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.direct_messages">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>direct_messages
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.favorites">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>favorites
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.followers">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>followers
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.friends">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>friends
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.friendships">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>friendships
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.geo">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>geo
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.getAccessToken">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getAccessToken
+            <span class="apidocSignatureSpan">(requestToken, requestTokenSecret, oauth_verifier, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.getAuthUrl">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getAuthUrl
+            <span class="apidocSignatureSpan">(requestToken, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.getRequestToken">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getRequestToken
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.getStream">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getStream
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, dataCallback, endCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.getTimeline">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getTimeline
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.help">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>help
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.lists">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>lists
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.mutes">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>mutes
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.oauth">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>oauth
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.rateLimitStatus">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>rateLimitStatus
+            <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.report_spam">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>report_spam
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.savedSearches">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>savedSearches
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.search">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>search
+            <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.statuses">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>statuses
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.suggestions">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>suggestions
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.trends">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>trends
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.updateProfileImage">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>updateProfileImage
+            <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.uploadMedia">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadMedia
+            <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.uploadMediaChunked">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadMediaChunked
+            <span class="apidocSignatureSpan">(params, media_type, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.uploadVideo">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadVideo
+            <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.users">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>users
+            <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-twitter-api.index.prototype.verifyCredentials">
+            function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>verifyCredentials
+            <span class="apidocSignatureSpan">(accessToken, accessTokenSecret, params, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-twitter-api" id="apidoc.module.node-twitter-api">module node-twitter-api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.node-twitter-api" id="apidoc.element.node-twitter-api.node-twitter-api">
+        function <span class="apidocSignatureSpan"></span>node-twitter-api
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node-twitter-api = function (options) {
+	if (!(this instanceof Twitter))
+		return new Twitter(options);
+
+	this.consumerKey = options.consumerKey;
+	this.consumerSecret = options.consumerSecret;
+	this.callback = options.callback;
+
+	this.x_auth_access_type = options.x_auth_access_type;
+
+	this.oa = new oauth.OAuth("https://twitter.com/oauth/request_token", "https://twitter.com/oauth/access_token",
+		this.consumerKey, this.consumerSecret, "1.0A", this.callback, "HMAC-SHA1");
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index" id="apidoc.element.node-twitter-api.index">
+        function <span class="apidocSignatureSpan">node-twitter-api.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (options) {
+	if (!(this instanceof Twitter))
+		return new Twitter(options);
+
+	this.consumerKey = options.consumerKey;
+	this.consumerSecret = options.consumerSecret;
+	this.callback = options.callback;
+
+	this.x_auth_access_type = options.x_auth_access_type;
+
+	this.oa = new oauth.OAuth("https://twitter.com/oauth/request_token", "https://twitter.com/oauth/access_token",
+		this.consumerKey, this.consumerSecret, "1.0A", this.callback, "HMAC-SHA1");
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-twitter-api.index" id="apidoc.module.node-twitter-api.index">module node-twitter-api.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.index" id="apidoc.element.node-twitter-api.index.index">
+        function <span class="apidocSignatureSpan">node-twitter-api.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (options) {
+	if (!(this instanceof Twitter))
+		return new Twitter(options);
+
+	this.consumerKey = options.consumerKey;
+	this.consumerSecret = options.consumerSecret;
+	this.callback = options.callback;
+
+	this.x_auth_access_type = options.x_auth_access_type;
+
+	this.oa = new oauth.OAuth("https://twitter.com/oauth/request_token", "https://twitter.com/oauth/access_token",
+		this.consumerKey, this.consumerSecret, "1.0A", this.callback, "HMAC-SHA1");
+
+	return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-twitter-api.index.prototype" id="apidoc.module.node-twitter-api.index.prototype">module node-twitter-api.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.account" id="apidoc.element.node-twitter-api.index.prototype.account">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>account
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">account = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	var method = "POST";
+	switch (url) {
+		case "settings":
+			if (Object.keys(params).length === 0) {
+				method = "GET";
+			}
+			break;
+		case "verify_credentials":
+			method = "GET";
+			break;
+		case "update_profile_image":
+			this.updateProfileImage(params, accessToken, accessTokenSecret, callback);
+			return;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "account/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "account/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "account/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.blocks" id="apidoc.element.node-twitter-api.index.prototype.blocks">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>blocks
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blocks = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	var method = "GET";
+	switch (url) {
+		case "create":
+		case "destroy":
+			method = "POST";
+			break;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "blocks/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "blocks/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "blocks/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.direct_messages" id="apidoc.element.node-twitter-api.index.prototype.direct_messages">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>direct_messages
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">direct_messages = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+
+	switch (url) {
+		case "direct_messages":
+		case "":
+			url = "";
+			break;
+		case "destroy":
+		case "new":
+			method = "POST";
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "direct_messages" + ((url) ? "/" + url : "") + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret
+, function(error, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "direct_messages" + ((url) ? "/" + url : "") + ".json?" + querystring.stringify(params
+));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "direct_messages/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response
+) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.favorites" id="apidoc.element.node-twitter-api.index.prototype.favorites">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>favorites
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">favorites = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "destroy":
+		case "create":
+			method = "POST";
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "favorites/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(
+error, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "favorites/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "favorites/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.followers" id="apidoc.element.node-twitter-api.index.prototype.followers">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>followers
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">followers = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase(); // ids or list
+
+	this.oa.get(baseUrl + "followers/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "folllowers/" + url + ".json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.friends" id="apidoc.element.node-twitter-api.index.prototype.friends">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>friends
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">friends = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase(); // ids or list
+
+	this.oa.get(baseUrl + "friends/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "friends/" + url + ".json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.friendships" id="apidoc.element.node-twitter-api.index.prototype.friendships">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>friendships
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">friendships = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase(); // ids or list
+	var method = "GET";
+
+	// define endpoints that use POST
+	switch (type) {
+		case "create":
+		case "destroy":
+		case "update":
+			method = "POST";
+	}
+
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "friendships/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function
+(error, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "friendships/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "friendships/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.geo" id="apidoc.element.node-twitter-api.index.prototype.geo">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>geo
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geo = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "place":
+			method = "POST";
+			break;
+		case "id":
+			url = "id/" + params.place_id;
+			delete params.place_id;
+			break;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "geo/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error,
+data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "geo/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "geo/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.getAccessToken" id="apidoc.element.node-twitter-api.index.prototype.getAccessToken">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getAccessToken
+        <span class="apidocSignatureSpan">(requestToken, requestTokenSecret, oauth_verifier, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccessToken = function (requestToken, requestTokenSecret, oauth_verifier, callback) {
+	this.oa.getOAuthAccessToken(requestToken, requestTokenSecret, oauth_verifier, function(error, oauthAccessToken, oauthAccessTokenSecret
+, results) {
+		if (error) {
+			callback(error);
+		} else {
+			callback(null, oauthAccessToken, oauthAccessTokenSecret, results);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+If no error has occured, you now have a `requestToken` and a `requestTokenSecret`. You should store them somewhere (e.g. in a session
+, if you are using express), because you will need them later to get the current user's access token, which is used for authentification
+.
+
+### Step 3: Getting an Access Token ###
+Redirect the user to `https://twitter.com/oauth/authenticate?oauth_token=[requestToken]`. `twitter.getAuthUrl(requestToken, options
+)` also returns that URL (the options parameter is optional and may contain a boolean `force_login` and a String `screen_name` -
+see the Twitter API Documentation for more information on these parameters).
+If he allows your app to access his data, Twitter will redirect him to your callback-URL (defined in Step 1) containing the get-
+parameters: `oauth_token` and `oauth_verifier`. You can use `oauth_token` (which is the `requestToken` in Step 2) to find the associated
+ `requestTokenSecret`. You will need `requestToken`, `requestTokenSecret` and `oauth_verifier` to get an Access Token.
+```javascript
+twitter.<span class="apidocCodeKeywordSpan">getAccessToken</span>(requestToken, requestTokenSecret, oauth_verifier, function(error
+, accessToken, accessTokenSecret, results) {
+	if (error) {
+		console.log(error);
+	} else {
+		//store accessToken and accessTokenSecret somewhere (associated to the user)
+		//Step 4: Verify Credentials belongs here
+	}
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.getAuthUrl" id="apidoc.element.node-twitter-api.index.prototype.getAuthUrl">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getAuthUrl
+        <span class="apidocSignatureSpan">(requestToken, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthUrl = function (requestToken, options) {
+	var extraArgs = "";
+	if (options &amp;&amp; options.force_login) {
+		extraArgs += "&amp;force_login=1";
+	}
+	if (options &amp;&amp; options.screen_name) {
+		extraArgs += "&amp;screen_name=" + options.screen_name;
+	}
+	return authUrl + requestToken + extraArgs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		//store token and tokenSecret somewhere, you'll need them later; redirect user
+	}
+});
+```
+If no error has occured, you now have a `requestToken` and a `requestTokenSecret`. You should store them somewhere (e.g. in a session
+, if you are using express), because you will need them later to get the current user's access token, which is used for authentification
+.
+
+### Step 3: Getting an Access Token ###
+Redirect the user to `https://twitter.com/oauth/authenticate?oauth_token=[requestToken]`. `twitter.<span class="apidocCodeKeywordSpan
+">getAuthUrl</span>(requestToken, options)` also returns that URL (the options parameter is optional and may contain a boolean `
+force_login` and a String `screen_name` - see the Twitter API Documentation for more information on these parameters).
+If he allows your app to access his data, Twitter will redirect him to your callback-URL (defined in Step 1) containing the get-
+parameters: `oauth_token` and `oauth_verifier`. You can use `oauth_token` (which is the `requestToken` in Step 2) to find the associated
+ `requestTokenSecret`. You will need `requestToken`, `requestTokenSecret` and `oauth_verifier` to get an Access Token.
+```javascript
+twitter.getAccessToken(requestToken, requestTokenSecret, oauth_verifier, function(error, accessToken, accessTokenSecret, results
+) {
+	if (error) {
+		console.log(error);
+	} else {
+		//store accessToken and accessTokenSecret somewhere (associated to the user)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.getRequestToken" id="apidoc.element.node-twitter-api.index.prototype.getRequestToken">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getRequestToken
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRequestToken = function (callback) {
+	this.oa.getOAuthRequestToken({x_auth_access_type: this.x_auth_access_type}, function(error, oauthToken, oauthTokenSecret, results
+) {
+		if (error) {
+			callback(error);
+		} else {
+			callback(null, oauthToken, oauthTokenSecret, results);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	callback: 'http://yoururl.tld/something'
+});
+```
+
+Optionally you can add `x_auth_access_type: "read"` or `x_auth_access_type: "write"` (see: https://dev.twitter
+.com/oauth/reference/post/oauth/request_token).
+### Step 2: Getting a request token ###
+```javascript
+twitter.<span class="apidocCodeKeywordSpan">getRequestToken</span>(function(error, requestToken, requestTokenSecret, results){
+	if (error) {
+		console.log("Error getting OAuth request token : " + error);
+	} else {
+		//store token and tokenSecret somewhere, you'll need them later; redirect user
+	}
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.getStream" id="apidoc.element.node-twitter-api.index.prototype.getStream">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getStream
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, dataCallback, endCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStream = function (type, params, accessToken, accessTokenSecret, dataCallback, endCallback) {
+	type = type.toLowerCase();
+
+	var url, method = "GET";
+	switch (type) {
+		case "userstream":
+		case "user":
+			url = "https://userstream.twitter.com/1.1/user.json";
+			break;
+		case "sitestream":
+		case "site":
+			url = "https://sitestream.twitter.com/1.1/site.json";
+			break;
+		case "sample":
+			url = "https://stream.twitter.com/1.1/statuses/sample.json";
+			break;
+		case "firehose":
+			url = "https://stream.twitter.com/1.1/statuses/firehose.json";
+			break;
+		case "filter":
+			method = "POST";
+			url = "https://stream.twitter.com/1.1/statuses/filter.json";
+			break;
+		default:
+			var errorMessage = "Please specify an existing type.";
+			dataCallback({message: errorMessage, e: new Error(errorMessage)}, null, null, null);
+			return false;
+	}
+
+	var req;
+	if (method == "GET") {
+		req = this.oa.get(url + "?" + querystring.stringify(params), accessToken, accessTokenSecret);
+	} else {
+		req = this.oa.post(url, accessToken, accessTokenSecret, params, null);
+	}
+	var msg = [];
+	req.addListener("response", function(res) {
+		res.setEncoding("utf-8");
+		res.addListener("data", function(chunk) {
+			if (chunk == "\r\n") {
+				dataCallback(null, {}, chunk, res);
+				return;
+			} else if (chunk.substr(chunk.length - 2) == "\r\n") {
+				msg.push(chunk.substr(0, chunk.length - 2));
+				var ret = msg.join("");
+				msg = [];
+
+				var parsedRet;
+				try {
+					parsedRet = JSON.parse(ret);
+				} catch (e) {
+					dataCallback({
+						message: "Error while parsing Twitter-Response.",
+						error: e
+					}, null, chunk, res);
+					return;
+				}
+				dataCallback(null, parsedRet, ret, res);
+				return;
+			} else {
+				msg.push(chunk);
+				return;
+			}
+		});
+		res.addListener("end", function() {
+			endCallback(res);
+		});
+	});
+	req.end();
+
+	return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.getTimeline" id="apidoc.element.node-twitter-api.index.prototype.getTimeline">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>getTimeline
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTimeline = function (type, params, accessToken, accessTokenSecret, callback) {
+	type = type.toLowerCase();
+
+	var url;
+	switch (type) {
+		case "home_timeline":
+		case "home":
+			url = "home_timeline";
+			break;
+		case "mentions_timeline":
+		case "mentions":
+			url = "mentions_timeline";
+			break;
+		case "user_timeline":
+		case "user":
+			if (!params.user_id &amp;&amp; !params.screen_name) {
+				callback("Always specify either an user_id or screen_name when requesting a user timeline.");
+				return false;
+			}
+			url = "user_timeline";
+			break;
+		case "retweets_of_me":
+		case "retweets":
+			url = "retweets_of_me";
+			break;
+		default:
+			callback("Please specify an existing type.");
+			return false;
+	}
+
+	this.oa.get(baseUrl + "statuses/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+		if (error) {
+			callback(error);
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.help" id="apidoc.element.node-twitter-api.index.prototype.help">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>help
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">help = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	this.oa.get(baseUrl + "help/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error,
+data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "help/" + url + ".json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.lists" id="apidoc.element.node-twitter-api.index.prototype.lists">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>lists
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lists = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "members/destroy":
+		case "members/destroy_all":
+		case "members/create":
+		case "members/create_all":
+		case "subscribers/create":
+		case "subscribers/destroy":
+		case "destroy":
+		case "update":
+		case "create":
+			method = "POST";
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "lists/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "lists/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "lists/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.mutes" id="apidoc.element.node-twitter-api.index.prototype.mutes">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>mutes
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mutes = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	var method = "GET";
+	switch (url) {
+		case "users/create":
+		case "users/destroy":
+			method = "POST";
+			break;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "mutes/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "mutes/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "mutes/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.oauth" id="apidoc.element.node-twitter-api.index.prototype.oauth">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>oauth
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oauth = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "access_token":
+		case "request_token":
+			method = "POST";
+			url = "oauth/" + url;
+			break;
+		case "token":
+		case "invalidate_token":
+			method = "POST";
+			url = "oauth2/" + url;
+			break;
+		default:
+			url = "oauth/" + url;
+			break;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error, data, response
+) {
+			if (error) {
+				callback(error, data, response, baseUrl + "geo/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.rateLimitStatus" id="apidoc.element.node-twitter-api.index.prototype.rateLimitStatus">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>rateLimitStatus
+        <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rateLimitStatus = function (params, accessToken, accessTokenSecret, callback) {
+	this.oa.get(baseUrl + "application/rate_limit_status.json?" + querystring.stringify(params), accessToken, accessTokenSecret, function
+(error, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "application/rate_limit_status.json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.report_spam" id="apidoc.element.node-twitter-api.index.prototype.report_spam">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>report_spam
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report_spam = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	this.oa.post(baseUrl + "users/report_spam.json", accessToken, accessTokenSecret, params, function(error, data, response) {
+		if (error) {
+			callback(error, data, response);
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.savedSearches" id="apidoc.element.node-twitter-api.index.prototype.savedSearches">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>savedSearches
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">savedSearches = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "create":
+			method = "POST";
+			break;
+		case "show":
+			url = "show/" + params.id;
+			delete params.id;
+			break;
+		case "destroy":
+			url = "destroy/" + params.id;
+			delete params.id;
+			method = "POST";
+			break;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "saved_searches/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function
+(error, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "saved_searches/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "saved_searches/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response
+) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.search" id="apidoc.element.node-twitter-api.index.prototype.search">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>search
+        <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (params, accessToken, accessTokenSecret, callback) {
+	this.oa.get(baseUrl + "search/tweets.json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error, data
+, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "search/tweets.json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.statuses" id="apidoc.element.node-twitter-api.index.prototype.statuses">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>statuses
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">statuses = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	var method = "GET";
+	switch (type) {
+		case "retweets":
+			url = "retweets/" + params.id;
+			delete params.id;
+			break;
+		case "show":
+			url = "show/" + params.id;
+			delete params.id;
+			break;
+		case "lookup":
+			url = "lookup";
+			method = "POST";
+			break;
+		case "destroy":
+			url = "destroy/" + params.id;
+			delete params.id;
+			method = "POST";
+			break;
+		case "update":
+			method = "POST";
+			break;
+		case "retweet":
+			url = "retweet/" + params.id;
+			delete params.id;
+			method = "POST";
+			break;
+		case "unretweet":
+			url = "unretweet/" + params.id;
+			delete params.id;
+			method = "POST";
+			break;
+		case "oembed":
+			url ="oembed";
+			break;
+		case "upload_media":
+			this.uploadMedia(params, accessToken, accessTokenSecret, callback);
+			return;
+		case "update_with_media":
+			callback("'update_with_media' type has been removed. Use 'upload_media' instead");
+			return false;
+		default:
+			callback("Please specify an existing type.");
+			return false;
+	}
+
+	if (method == "GET") {
+		this.oa.get(baseUrl + "statuses/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+			if (error) {
+				callback(error, data, response, baseUrl + "statuses/" + url + ".json?" + querystring.stringify(params));
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	} else {
+		this.oa.post(baseUrl + "statuses/" + url + ".json", accessToken, accessTokenSecret, params, function(error, data, response) {
+			if (error) {
+				callback(error, data, response);
+			} else {
+				try {
+					var parsedData = JSON.parse(data);
+				} catch (e) {
+					callback(e, data, response);
+				}
+				callback(null, parsedData, response);
+			}
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+In the above example, `params` is an optional object containing extra parameters to be sent to the Twitter endpoint (see https://
+dev.twitter.com/rest/reference/get/account/verify_credentials)
+
+## Methods ##
+(Allmost) all function names replicate the endpoints of the Twitter API 1.1.
+If you want to post a status e. g. - which is done by posting data to statuses/update - you can just do the following:
+```javascript
+twitter.<span class="apidocCodeKeywordSpan">statuses</span>("update", {
+		status: "Hello world!"
+	},
+	accessToken,
+	accessTokenSecret,
+	function(error, data, response) {
+		if (error) {
+			// something went wrong
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.suggestions" id="apidoc.element.node-twitter-api.index.prototype.suggestions">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>suggestions
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">suggestions = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+	var method = "GET";
+
+	switch (url) {
+		case "suggestions":
+		case "":
+			url = "";
+			break;
+		case "members":
+			url = params.slug + "/members";
+			delete params.slug;
+			break;
+		case "slug":
+			url = params.slug;
+			delete params.slug;
+			break;
+	}
+
+	this.oa.get(baseUrl + "users/suggestions" + ((url) ? "/" + url : "") + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret
+, function(error, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "users/suggestions" + ((url) ? "/" + url : "") + ".json?" + querystring.stringify(params
+));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.trends" id="apidoc.element.node-twitter-api.index.prototype.trends">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>trends
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trends = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	this.oa.get(baseUrl + "trends/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "trends/" + url + ".json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.updateProfileImage" id="apidoc.element.node-twitter-api.index.prototype.updateProfileImage">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>updateProfileImage
+        <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateProfileImage = function (params, accessToken, accessTokenSecret, callback) {
+
+	if (!fs.existsSync(params["image"])) throw new Error("no image");
+
+	var r = request.post({
+		url: baseUrl + "account/update_profile_image.json",
+		oauth: {
+			consumer_key: this.consumerKey,
+			consumer_secret: this.consumerSecret,
+			token: accessToken,
+			token_secret: accessTokenSecret
+		}
+	}, function(error, response, body) {
+		if (error) {
+			callback(error, body, response, baseUrl + "account/update_profile_image.json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedBody = JSON.parse(body);
+			} catch (e) {
+				callback(e, body, response);
+			}
+			callback(null, parsedBody, response);
+		}
+	});
+
+	// multipart/form-data
+	var form = r.form();
+	for (var key in params) {
+		if (key != "image") {
+			form.append(key, params[key]);
+		}
+	}
+
+	form.append("image", fs.createReadStream(params["image"]));
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.uploadMedia" id="apidoc.element.node-twitter-api.index.prototype.uploadMedia">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadMedia
+        <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uploadMedia = function (params, accessToken, accessTokenSecret, callback) {
+	var r = request.post({
+		url: uploadBaseUrl + "media/upload.json",
+		oauth: {
+			consumer_key: this.consumerKey,
+			consumer_secret: this.consumerSecret,
+			token: accessToken,
+			token_secret: accessTokenSecret
+		}
+	}, function(error, response, body) {
+		if (error) {
+			callback(error, body, response, uploadBaseUrl + "media/upload.json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedBody = JSON.parse(body);
+			} catch (e) {
+				callback(e, body, response);
+			}
+			callback(null, parsedBody, response);
+		}
+	});
+
+	var parameter = (params.isBase64) ? "media_data" : "media";
+
+	// multipart/form-data
+	var form = r.form();
+	if (fs.existsSync(params.media)) {
+		form.append(parameter, fs.createReadStream(params.media));
+	} else {
+		form.append(parameter, params.media);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `retweets` or `retweets_of_me`
+
+For more information on the different types of timelines see https://dev.twitter.com/rest/reference/get/statuses/home_timeline (
+analog for the other types)
+
+For Streams you must use _getStream_ which has two instead of just one callback: a dataCallback and an endCallback. (c.f. data and
+ end events of node's http response)
+
+## How to upload media ##
+To upload media to Twitter, call `twitter.<span class="apidocCodeKeywordSpan">uploadMedia</span>(params, accessToken, accessTokenSecret
+, callback)` with params containing the following:
+* _media_: Either the raw binary content of the image, the binary base64 encoded (see isBase64 below) or the path to the file containing
+ the image.
+* _isBase64_: Set to true, if media contains base64 encoded data
+For a example result see https://dev.twitter.com/rest/reference/post/media/upload. You can pass multiple media_ids to the statuses
+/update endpoint by seperating them with commas (e.g. "[id1],[id2],[id3],[id4]").
+
+## How to upload Video ##
+To upload video to Twitter, call `twitter.uploadVideo(params, accessToken, accessTokenSecret, callback)` with params containing
+the following:
+* _media_: Path to the file containing the video.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.uploadMediaChunked" id="apidoc.element.node-twitter-api.index.prototype.uploadMediaChunked">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadMediaChunked
+        <span class="apidocSignatureSpan">(params, media_type, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uploadMediaChunked = function (params, media_type, accessToken, accessTokenSecret, callback) {
+	var bufferLength = 1000000;
+	var theBuffer = new Buffer(bufferLength);
+	var offset = 0;
+	var segment_index = 0;
+	var finished = 0;
+	var oauthObj = {
+		consumer_key: this.consumerKey,
+		consumer_secret: this.consumerSecret,
+		token: accessToken,
+		token_secret: accessTokenSecret
+	};
+
+	fs.stat(params.media, function (err, stats) {
+		var formData, finalizeMedia, options;
+		formData = {
+			command: "INIT",
+			media_type: media_type,
+			total_bytes: stats.size
+		};
+		options = {
+			url: uploadBaseUrl + "media/upload.json",
+			oauth: oauthObj,
+			formData: formData
+		};
+
+		finalizeMedia = function (media_id) {
+			return function (err, response, body) {
+
+				finished++;
+				if (finished === segment_index) {
+
+					options.formData = {
+						command: 'FINALIZE',
+						media_id: media_id
+					};
+					request.post(options, function (err, response, body) {
+						if (err) {
+							return cb(err, body);
+						} else {
+							try {
+								var parsedBody = JSON.parse(body);
+							} catch (e) {
+								return callback(e, body);
+							}
+							return callback(null, parsedBody);
+						}
+					});
+				}
+			};
+		};
+		request.post(options, function (err, response, body) {
+			var media_id;
+			media_id = JSON.parse(body).media_id_string;
+			fs.open(params.media, 'r', function (err, fd) {
+				var bytesRead, data;
+
+				while (offset &lt; stats.size) {
+
+					bytesRead = fs.readSync(fd, theBuffer, 0, bufferLength, null);
+					data = bytesRead &lt; bufferLength ? theBuffer.slice(0, bytesRead) : theBuffer;
+					options.formData = {
+						command: "APPEND",
+						media_id: media_id,
+						segment_index: segment_index,
+						media_data: data.toString('base64')
+					};
+					request.post(options, finalizeMedia(media_id));
+					offset += bufferLength;
+					segment_index++
+				}
+			});
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.uploadVideo" id="apidoc.element.node-twitter-api.index.prototype.uploadVideo">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>uploadVideo
+        <span class="apidocSignatureSpan">(params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uploadVideo = function (params, accessToken, accessTokenSecret, callback) {
+	this.uploadMediaChunked(params, "video/mp4", accessToken, accessTokenSecret, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## How to upload media ##
+To upload media to Twitter, call `twitter.uploadMedia(params, accessToken, accessTokenSecret, callback)` with params containing
+the following:
+* _media_: Either the raw binary content of the image, the binary base64 encoded (see isBase64 below) or the path to the file containing
+ the image.
+* _isBase64_: Set to true, if media contains base64 encoded data
+For a example result see https://dev.twitter.com/rest/reference/post/media/upload. You can pass multiple media_ids to the statuses
+/update endpoint by seperating them with commas (e.g. "[id1],[id2],[id3],[id4]").
+
+## How to upload Video ##
+To upload video to Twitter, call `twitter.<span class="apidocCodeKeywordSpan">uploadVideo</span>(params, accessToken, accessTokenSecret
+, callback)` with params containing the following:
+* _media_: Path to the file containing the video.
+
+You can pass media_id to the statuses/update endpoint and video will be uploaded to twitter. Please note that video should be less
+ than 15mb or 30 sec in length.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.users" id="apidoc.element.node-twitter-api.index.prototype.users">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>users
+        <span class="apidocSignatureSpan">(type, params, accessToken, accessTokenSecret, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">users = function (type, params, accessToken, accessTokenSecret, callback) {
+	var url = type.toLowerCase();
+
+	this.oa.get(baseUrl + "users/" + url + ".json?" + querystring.stringify(params), accessToken, accessTokenSecret, function(error
+, data, response) {
+		if (error) {
+			callback(error, data, response, baseUrl + "users/" + url + ".json?" + querystring.stringify(params));
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-twitter-api.index.prototype.verifyCredentials" id="apidoc.element.node-twitter-api.index.prototype.verifyCredentials">
+        function <span class="apidocSignatureSpan">node-twitter-api.index.prototype.</span>verifyCredentials
+        <span class="apidocSignatureSpan">(accessToken, accessTokenSecret, params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyCredentials = function (accessToken, accessTokenSecret, params, callback) {
+	var url = baseUrl + "account/verify_credentials.json";
+	if (typeof params == "function") {
+		callback = params;
+	} else {
+		url += '?' + querystring.stringify(params);
+	}
+	this.oa.get(url, accessToken, accessTokenSecret, function(error, data, response) {
+		if (error) {
+			callback(error);
+		} else {
+			try {
+				var parsedData = JSON.parse(data);
+			} catch (e) {
+				callback(e, data, response);
+			}
+			callback(null, parsedData, response);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+});
+```
+If no error occured, you now have an `accessToken` and an `accessTokenSecret`. You need them to authenticate later API-calls.
+
+### Step 4: (Optional) Verify Credentials ###
+```javascript
+twitter.<span class="apidocCodeKeywordSpan">verifyCredentials</span>(accessToken, accessTokenSecret, params, function(error, data
+, response) {
+	if (error) {
+		//something was wrong with either accessToken or accessTokenSecret
+		//start over with Step 1
+	} else {
+		//accessToken and accessTokenSecret can now be used to make api-calls (not yet implemented)
+		//data contains the user-data described in the official Twitter-API-docs
+		//you could e.g. display his screen_name
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
